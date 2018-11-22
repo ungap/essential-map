@@ -1,5 +1,4 @@
 var Map = require('../cjs');
-
 var $Map = Map;
 
 test();
@@ -12,7 +11,9 @@ if (typeof process !== 'undefined') {
   Object.defineProperty(global, 'Map', {
     configurable: true,
     get: function () {
-      return 1 === i++ ? void 0 : $Map;
+      if (1 === i++)
+        throw Map;
+      return $Map;
     },
     set: function (Map) {
       delete global.Map;

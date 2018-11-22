@@ -1,6 +1,8 @@
 /*! (c) Andrea Giammarchi - ISC */
-if (typeof Map == 'undefined')
-  Map = function () {
+var window = this || /* istanbul ignore next */ {};
+try { window.Map = Map; }
+catch (Map) {
+  window.Map = function Map() {
     var i = 0;
     var k = [];
     var v = [];
@@ -29,3 +31,4 @@ if (typeof Map == 'undefined')
       return -1 < i;
     }
   };
+}
