@@ -1,6 +1,5 @@
 /*! (c) Andrea Giammarchi - ISC */
-try { new Map; }
-catch (o_O) {
+if (typeof Map == 'undefined')
   Map = function () {
     var i = 0;
     var k = [];
@@ -30,4 +29,3 @@ catch (o_O) {
       return -1 < i;
     }
   };
-}

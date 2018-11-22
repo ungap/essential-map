@@ -1,2 +1,2 @@
 /*! (c) Andrea Giammarchi - ISC */
-try{new Map}catch(o_O){Map=function(){function n(n){return-1<(t=e.indexOf(n))}var t=0,e=[],r=[];return{"delete":function(u){var i=n(u);return i&&(e.splice(t,1),r.splice(t,1)),i},get:function(e){return n(e)?r[t]:void 0},has:function(t){return n(t)},set:function(u,i){return r[n(u)?t:e.push(u)-1]=i,this}}}}
+"undefined"==typeof Map&&(Map=function(){function n(n){return-1<(e=t.indexOf(n))}var e=0,t=[],r=[];return{"delete":function(u){var i=n(u);return i&&(t.splice(e,1),r.splice(e,1)),i},get:function(t){return n(t)?r[e]:void 0},has:function(e){return n(e)},set:function(u,i){return r[n(u)?e:t.push(u)-1]=i,this}}});

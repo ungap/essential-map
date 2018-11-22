@@ -12,9 +12,7 @@ if (typeof process !== 'undefined') {
   Object.defineProperty(global, 'Map', {
     configurable: true,
     get: function () {
-      if (1 === i++)
-        throw $Map;
-      return $Map;
+      return 1 === i++ ? void 0 : $Map;
     },
     set: function (Map) {
       delete global.Map;
