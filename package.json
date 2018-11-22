@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ungap/map.git"
+    "url": "git+https://github.com/ungap/essential-map.git"
   },
   "bugs": {
-    "url": "https://github.com/ungap/map/issues"
+    "url": "https://github.com/ungap/essential-map/issues"
   },
-  "homepage": "https://github.com/ungap/map#readme"
+  "homepage": "https://github.com/ungap/essential-map#readme"
 }
