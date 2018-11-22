@@ -1,5 +1,6 @@
-function loadScript(src, onload) {
+function loadScript(src, then) {
   var s = document.createElement('script');
+  var after = true;
   s.type = 'text/javascript';
   s.onload = onload;
   s.onreadystatechange = function () {
@@ -8,6 +9,12 @@ function loadScript(src, onload) {
   };
   s.src = src;
   document.documentElement.appendChild(s);
+  function onload() {
+    if (after) {
+      after = false;
+      then();
+    }
+  }
 }
 
 function loadTest(what, message) {
