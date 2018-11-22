@@ -5,7 +5,7 @@ var $Map = Map;
 test();
 
 delete require.cache[require.resolve('../cjs')];
-delete global.Map;
+global.Map = void 0;
 
 if (typeof process !== 'undefined') {
   var i = 0;
@@ -39,8 +39,8 @@ function test() {
   console.assert(ws1.set(a, 123) === ws1);
   console.assert(ws1.has(a) === true);
   console.assert(ws1.get(a) === 123);
-  console.assert(ws1.delete(a) === true);
-  console.assert(ws1.delete(a) === false);
+  console.assert(ws1['delete'](a) === true);
+  console.assert(ws1['delete'](a) === false);
   console.assert(ws1.has(a) === false);
   console.assert(ws1.get(a) === void 0);
 }

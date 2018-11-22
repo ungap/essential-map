@@ -9,3 +9,7 @@ Only methods are `delete`, `get`, `has`, and `set`.
   * CDN via https://unpkg.com/@ungap/essential-map
   * ESM via `import WeakSet from '@ungap/essential-map'`
   * CJS via `const WeakSet = require('@ungap/essential-map')`
+
+Compatible down to IE9, works well with ES5 shim upfront in IE8 (and maybe lower too).
+
+[Live test](https://ungap.github.io/essential-map/test/)

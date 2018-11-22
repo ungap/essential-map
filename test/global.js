@@ -1,10 +1,13 @@
 function loadScript(src, onload) {
-  var s = document.documentElement.appendChild(
-    document.createElement('script')
-  );
+  var s = document.createElement('script');
   s.type = 'text/javascript';
   s.onload = onload;
+  s.onreadystatechange = function () {
+    if (/loaded|complete/.test(s.readyState))
+      setTimeout(onload);
+  };
   s.src = src;
+  document.documentElement.appendChild(s);
 }
 
 function loadTest(what, message) {
