@@ -1,8 +1,8 @@
 /*! (c) Andrea Giammarchi - ISC */
-var window = this || /* istanbul ignore next */ {};
-try { window.Map = Map; }
+var self = this || /* istanbul ignore next */ {};
+try { self.Map = Map; }
 catch (Map) {
-  window.Map = function Map() {
+  self.Map = function Map() {
     var i = 0;
     var k = [];
     var v = [];
@@ -32,4 +32,4 @@ catch (Map) {
     }
   };
 }
-export default window.Map;
+export default self.Map;
