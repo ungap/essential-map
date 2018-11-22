@@ -1,7 +1,7 @@
 /*! (c) Andrea Giammarchi - ISC */
 try { new Map; }
 catch (o_O) {
-  Map = function Map() {
+  Map = function () {
     var i = 0;
     var k = [];
     var v = [];
