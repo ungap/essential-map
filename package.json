@@ -1,6 +1,6 @@
 {
   "name": "@ungap/essential-map",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "An essential Map poorlyfill for legacy browsers.",
   "main": "cjs/index.js",
   "module": "esm/index.js",
