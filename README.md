@@ -7,8 +7,8 @@ An essential [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 Only methods are `delete`, `get`, `has`, and `set`.
 
   * CDN via https://unpkg.com/@ungap/essential-map
-  * ESM via `import WeakSet from '@ungap/essential-map'`
-  * CJS via `const WeakSet = require('@ungap/essential-map')`
+  * ESM via `import Map from '@ungap/essential-map'`
+  * CJS via `const Map = require('@ungap/essential-map')`
 
 Compatible down to IE9, works well with ES5 shim upfront in IE8 (and maybe lower too).
 
