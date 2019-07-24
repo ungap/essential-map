@@ -4,7 +4,7 @@
 
 An essential [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) poorlyfill for legacy browsers.
 
-Only methods are `delete`, `get`, `has`, and `set`.
+Only methods are `delete`, `forEach`, `get`, `has`, and `set`.
 
   * CDN via https://unpkg.com/@ungap/essential-map
   * ESM via `import Map from '@ungap/essential-map'`

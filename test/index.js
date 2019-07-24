@@ -11,7 +11,7 @@ if (typeof process !== 'undefined') {
   Object.defineProperty(global, 'Map', {
     configurable: true,
     get: function () {
-      if (1 === i++)
+      if (0 === i++)
         throw Map;
       return $Map;
     },
@@ -34,10 +34,17 @@ function test() {
   var ws1 = new Map;
 
   console.assert(ws1.has(a) === false);
+  console.assert(ws1.has(b) === false);
   console.assert(ws1.set(a, 456) === ws1);
   console.assert(ws1.set(a, 123) === ws1);
   console.assert(ws1.has(a) === true);
   console.assert(ws1.get(a) === 123);
+  ws1.forEach(function (value, key, self) {
+    console.assert(this === b);
+    console.assert(value === 123);
+    console.assert(key === a);
+    console.assert(self === ws1);
+  }, b);
   console.assert(ws1['delete'](a) === true);
   console.assert(ws1['delete'](a) === false);
   console.assert(ws1.has(a) === false);
